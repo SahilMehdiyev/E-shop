@@ -6,3 +6,9 @@ class ProductAPIView(generics.ListAPIView):
     queryset = product_models.Product.objects.all()
     serializer_class = ProductSerializer
     
+    
+class ProductDetailAPIView(generics.RetrieveAPIView):
+    queryset = product_models.Product.objects.all()
+    serializer_class = ProductSerializer
+    lookup_field = 'id'
+    
